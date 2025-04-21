@@ -1,0 +1,228 @@
+   /* General Reset */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+ /* Global Styles */
+ :root {
+    --primary-blue: #1a365d;
+    --primary-gold: #c9b037;
+    --light-gold: #e6d070;
+    --dark-blue: #0f2542;
+    --white: #ffffff;
+    --light-gray: #f5f5f5;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* News Section Styles */
+.news-section {
+    padding: 50px 0;
+}
+
+.news-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.news-header h1 {
+    color: var(--primary-blue);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.news-header h2 {
+    color: var(--primary-gold);
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.news-header p {
+    color: var(--dark-blue);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* News List with Side-by-Side Layout */
+.news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.news-item {
+    display: flex;
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Even items have image on right */
+.news-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.news-content {
+    flex: 3;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-image-container {
+    flex: 2;
+    background-color: var(--light-gray);
+    position: relative;
+    overflow: hidden;
+    min-height: 250px;
+}
+
+.news-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.news-title {
+    color: var(--primary-blue);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.news-subtitle {
+    color: var(--primary-gold);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.news-date {
+    color: var(--dark-blue);
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin-bottom: 15px;
+}
+
+.news-description {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.read-more {
+    display: inline-block;
+    color: var(--primary-blue);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.9rem;
+    position: relative;
+    align-self: flex-start;
+}
+
+.read-more::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-gold);
+    transition: width 0.3s ease;
+}
+
+.read-more:hover::after {
+    width: 100%;
+}
+
+.news-divider {
+    height: 5px;
+    background: linear-gradient(to right, var(--primary-blue), var(--primary-gold));
+    margin: 40px 0;
+    border-radius: 2px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .news-header h1 {
+        font-size: 2rem;
+    }
+    
+    .news-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .news-header p {
+        font-size: 1rem;
+    }
+    
+    .news-item, .news-item:nth-child(even) {
+        flex-direction: column;
+    }
+    
+    .news-image-container {
+        height: 200px;
+        min-height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .news-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .news-header h2 {
+        font-size: 1.3rem;
+    }
+    
+    .news-section {
+        padding: 30px 0;
+    }
+    
+    .news-content {
+        padding: 20px;
+    }
+    
+    .news-title {
+        font-size: 1.3rem;
+    }
+    
+    .news-subtitle {
+        font-size: 1.1rem;
+    }
+}
