@@ -175,6 +175,459 @@ body {
     animation: pulse 2s infinite ease-in-out;
 }
 
+/* Transparency Board Styles */
+.transparency-board {
+    max-width: 1200px;
+    margin: 3rem auto;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding-bottom: 2rem;
+}
+
+.board-header {
+    background: linear-gradient(135deg, #0044cc, #003399);
+    color: #fff;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.board-header h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #d4af37;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.board-header::after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 3px;
+    background-color: #d4af37;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.board-description {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 1rem auto 0;
+    opacity: 0.9;
+}
+
+/* Tabs Navigation */
+.board-tabs {
+    display: flex;
+    justify-content: center;
+    background-color: #f5f5f5;
+    padding: 0.5rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.tab-button {
+    background-color: transparent;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 0 0.5rem;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    position: relative;
+}
+
+.tab-button:hover {
+    background-color: #e5e5e5;
+    color: #0044cc;
+}
+
+.tab-button.active {
+    background-color: #0044cc;
+    color: #fff;
+}
+
+.tab-button.active::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #0044cc;
+}
+
+/* Tab Content */
+.tab-content {
+    display: none;
+    padding: 2rem;
+}
+
+.tab-content.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Resolution Cards */
+.resolution-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+    overflow: hidden;
+    border: 1px solid #eee;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resolution-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.resolution-header {
+    background-color: #f8f8f8;
+    padding: 1.2rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+.resolution-header h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #0044cc;
+    margin: 0;
+}
+
+.date {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.9rem;
+    color: #777;
+    background-color: #f0f0f0;
+    padding: 0.3rem 0.7rem;
+    border-radius: 20px;
+}
+
+.resolution-details {
+    padding: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.resolution-meta {
+    flex: 1;
+    min-width: 300px;
+}
+
+.resolution-meta p {
+    margin-bottom: 0.7rem;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    color: #333;
+}
+
+.resolution-image {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.resolution-thumbnail {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.resolution-summary {
+    padding: 1.5rem;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    background-color: #fafafa;
+}
+
+.view-document {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1.5rem;
+    background-color: #0044cc;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.view-document:hover {
+    background-color: #003399;
+}
+
+/* Budget Allocation Section */
+.budget-container {
+    padding: 1rem;
+}
+
+.budget-container h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #0044cc;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.budget-chart-container {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.budget-chart {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.budget-breakdown {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.budget-breakdown h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.budget-item {
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.budget-item-header {
+    background-color: #0044cc;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.budget-category {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.budget-amount {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #d4af37;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+}
+
+.budget-item-details {
+    padding: 1.5rem;
+}
+
+.budget-item-details p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.budget-sub-items {
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.sub-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid #e0e0e0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.95rem;
+}
+
+.sub-item:last-child {
+    border-bottom: none;
+}
+
+/* Legislative Documents Section */
+.legislative-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.legislative-header h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #0044cc;
+    margin-bottom: 0.5rem;
+}
+
+.legislative-header p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.legislative-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.legislative-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.legislative-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.legislative-icon {
+    background-color: #0044cc;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.legislative-details {
+    flex: 1;
+}
+
+.legislative-details h4 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.3rem;
+}
+
+.legislative-details p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 0.7rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .board-tabs {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .tab-button {
+        width: 100%;
+        margin: 0;
+    }
+    
+    .tab-button.active::after {
+        display: none;
+    }
+    
+    .resolution-details {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .legislative-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .board-header h2 {
+        font-size: 2rem;
+    }
+    
+    .tab-content {
+        padding: 1.5rem 1rem;
+    }
+    
+    .resolution-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .date {
+        align-self: flex-start;
+    }
+    
+    .budget-item-header {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-start;
+    }
+    
+    .budget-amount {
+        align-self: flex-start;
+    }
+}
+
 /* Pulse animation for welcome text */
 @keyframes pulse {
     0% {

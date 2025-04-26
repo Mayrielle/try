@@ -6,48 +6,117 @@ body {
     background: linear-gradient(to bottom, #FAF9F6, #E6E5E2); /* Gradient background */
 }
 
-.sidebar { 
-    width: 300px; 
-    background: linear-gradient(to bottom, #00aaff, #0044cc); /* Gradient blue background */
-    color: rgb(0, 0, 0); /* Text color */
-    z-index: 1000; /* High z-index to ensure it stays above other content */
+/* Enhanced Sidebar Styles with Blue and Gold Theme */
+.sidebar {
+    width: 300px;
+    background: linear-gradient(145deg, #0044cc, #0066ff);
+    color: white;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2);
+    padding-top: 20px;
+    z-index: 1000;
+}
+
+/* Logo container styling */
+.logo-container {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 2px solid rgba(255, 215, 0, 0.4);
+    margin-bottom: 20px;
+}
+
+.logo {
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid #ffd700;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+/* Sidebar title styling */
+.editable-title {
+    color: #ffd700;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    margin-left: 15px;
+    letter-spacing: 1px;
+}
+
+/* Navigation items styling */
+.w3-bar-block {
+    padding-top: 10px;
 }
 
 .w3-bar-item {
-    transition: background 0.3s; /* Smooth transition for background change */
-    padding-top: 15px; 
-}
-
-.w3-bar-item:hover,
-.w3-bar-item:focus {
-    background: linear-gradient(to right, #ecc902dc, #ffffff); /* Gradient yellow-white on hover */
-    color: black; /* Change text color on hover */
-}
-
-.w3-overlay {
-    background-color: transparent; /* Fully transparent */
-}
-
-/* Gradient Background Section */
-.gradient-background {
-    background: linear-gradient(to bottom, #00a7fb, #0044cc);
     color: white;
-    min-height: 500px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    position: relative;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin: 8px 0;
+    padding: 15px 20px;
+    border-left: 4px solid transparent;
+    transition: all 0.3s ease;
+    border-radius: 0 25px 25px 0;
 }
 
-.gradient-background {
-    min-height: 400px;
-    padding: 30px 15px;
+.w3-bar-item:hover {
+    background: linear-gradient(to right, rgba(255, 215, 0, 0.3), rgba(255, 215, 0, 0.1));
+    color: #ffd700;
+    border-left: 4px solid #ffd700;
+    transform: translateX(5px);
+}
+
+.w3-bar-item:active {
+    background: rgba(255, 215, 0, 0.4);
+}
+
+/* Icon styling in sidebar */
+.w3-bar-item i {
+    font-size: 18px;
+    width: 24px;
+    text-align: center;
+    color: #ffd700;
+    margin-right: 12px;
+    transition: transform 0.3s ease;
+}
+
+.w3-bar-item:hover i {
+    transform: scale(1.2);
+}
+
+/* Current page indicator */
+.w3-bar-item.active {
+    background: rgba(255, 215, 0, 0.2);
+    border-left: 4px solid #ffd700;
+    color: #ffd700;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .sidebar {
+        box-shadow: none;
+    }
+}
+
+/* Close button styling */
+.fa-remove {
+    color: #ffd700;
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
+.fa-remove:hover {
+    transform: rotate(90deg);
+    color: white;
+}
+
+/* Overlay styling when sidebar is open on mobile */
+.w3-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
 }
 
 /* Enhanced Search Bar */

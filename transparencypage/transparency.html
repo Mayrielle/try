@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="transparency.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="sidebar.css">
+    <script src="../homepage/search.js" defer></script>
 </head>
 <body class="w3-light-grey">
 
@@ -82,6 +83,190 @@
         <p class="welcome">WELCOME!</p>
     </div>
 </section>
+
+<!-- Transparency Board Section -->
+<section class="transparency-board">
+    <div class="board-header">
+        <h2>TRANSPARENCY BOARD</h2>
+        <p class="board-description">Access the latest resolutions, budget allocations, and legislative documents from the UNORSSGO.</p>
+    </div>
+    
+    <!-- Tabs Navigation -->
+    <div class="board-tabs">
+        <button class="tab-button active" onclick="openTab('resolutions')">Resolutions</button>
+        <button class="tab-button" onclick="openTab('budget')">Budget Allocation</button>
+        <button class="tab-button" onclick="openTab('legislative')">Legislative Documents</button>
+    </div>
+    
+    <!-- Resolutions Tab Content -->
+    <div id="resolutions" class="tab-content active">
+        <div class="resolution-card">
+            <div class="resolution-header">
+                <h3>Resolution No. 2025-001</h3>
+                <span class="date">February 15, 2025</span>
+            </div>
+            <div class="resolution-details">
+                <div class="resolution-meta">
+                    <p><strong>Title:</strong> Implementation of Student Wellness Program</p>
+                    <p><strong>Author:</strong> John Doe</p>
+                    <p><strong>Co-Author:</strong> Jane Smith</p>
+                </div>
+                <div class="resolution-image">
+                    <img src="/api/placeholder/400/300" alt="Resolution Document" class="resolution-thumbnail">
+                    <a href="#" class="view-document">View Full Document</a>
+                </div>
+            </div>
+            <div class="resolution-summary">
+                <p>A resolution mandating the implementation of a comprehensive wellness program for all students to promote mental health awareness and support.</p>
+            </div>
+        </div>
+        
+        <div class="resolution-card">
+            <div class="resolution-header">
+                <h3>Resolution No. 2025-002</h3>
+                <span class="date">March 10, 2025</span>
+            </div>
+            <div class="resolution-details">
+                <div class="resolution-meta">
+                    <p><strong>Title:</strong> Academic Calendar Revision</p>
+                    <p><strong>Author:</strong> Michael Johnson</p>
+                    <p><strong>Co-Author:</strong> Sarah Williams</p>
+                </div>
+                <div class="resolution-image">
+                    <img src="/api/placeholder/400/300" alt="Resolution Document" class="resolution-thumbnail">
+                    <a href="#" class="view-document">View Full Document</a>
+                </div>
+            </div>
+            <div class="resolution-summary">
+                <p>A resolution proposing modifications to the academic calendar to accommodate more student activities and wellness breaks.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Budget Allocation Tab Content -->
+    <div id="budget" class="tab-content">
+        <div class="budget-container">
+            <h3>UNORSSGO Allocated Budget 2024-2025</h3>
+            
+            <div class="budget-chart-container">
+                <div class="chart-placeholder">
+                    <img src="/api/placeholder/600/400" alt="Budget Chart" class="budget-chart">
+                </div>
+            </div>
+            
+            <div class="budget-breakdown">
+                <h4>Budget Breakdown</h4>
+                <div class="budget-item">
+                    <div class="budget-item-header">
+                        <span class="budget-category">Student Activities</span>
+                        <span class="budget-amount">₱450,000</span>
+                    </div>
+                    <div class="budget-item-details">
+                        <p>Funds allocated for university-wide events, celebrations, and student-led initiatives.</p>
+                        <div class="budget-sub-items">
+                            <div class="sub-item"><span>Cultural Events</span><span>₱150,000</span></div>
+                            <div class="sub-item"><span>Academic Competitions</span><span>₱120,000</span></div>
+                            <div class="sub-item"><span>Student-Led Projects</span><span>₱180,000</span></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="budget-item">
+                    <div class="budget-item-header">
+                        <span class="budget-category">Student Services</span>
+                        <span class="budget-amount">₱350,000</span>
+                    </div>
+                    <div class="budget-item-details">
+                        <p>Funds allocated for services directly benefiting students' welfare and development.</p>
+                        <div class="budget-sub-items">
+                            <div class="sub-item"><span>Mental Health Programs</span><span>₱120,000</span></div>
+                            <div class="sub-item"><span>Leadership Development</span><span>₱100,000</span></div>
+                            <div class="sub-item"><span>Student Assistance</span><span>₱130,000</span></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="budget-item">
+                    <div class="budget-item-header">
+                        <span class="budget-category">Administrative Operations</span>
+                        <span class="budget-amount">₱200,000</span>
+                    </div>
+                    <div class="budget-item-details">
+                        <p>Funds allocated for UNORSSGO's operational expenses and administrative functions.</p>
+                        <div class="budget-sub-items">
+                            <div class="sub-item"><span>Office Supplies</span><span>₱50,000</span></div>
+                            <div class="sub-item"><span>Training Programs</span><span>₱80,000</span></div>
+                            <div class="sub-item"><span>Communication Expenses</span><span>₱70,000</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Legislative Documents Tab Content -->
+    <div id="legislative" class="tab-content">
+        <div class="legislative-header">
+            <h3>Congress Minutes and Legislative Records</h3>
+            <p>Access the latest minutes, records, and documentation from the UNORSSGO Congress sessions.</p>
+        </div>
+        
+        <div class="legislative-cards">
+            <div class="legislative-card">
+                <div class="legislative-icon">
+                    <i class="fa fa-file-text"></i>
+                </div>
+                <div class="legislative-details">
+                    <h4>1st Regular Session (2024-2025)</h4>
+                    <p>February 5, 2025</p>
+                    <a href="#" class="view-document">View Document</a>
+                </div>
+            </div>
+            
+            <div class="legislative-card">
+                <div class="legislative-icon">
+                    <i class="fa fa-file-text"></i>
+                </div>
+                <div class="legislative-details">
+                    <h4>2nd Regular Session (2024-2025)</h4>
+                    <p>March 12, 2025</p>
+                    <a href="#" class="view-document">View Document</a>
+                </div>
+            </div>
+            
+            <div class="legislative-card">
+                <div class="legislative-icon">
+                    <i class="fa fa-file-text"></i>
+                </div>
+                <div class="legislative-details">
+                    <h4>Special Session: Budget Hearing</h4>
+                    <p>April 3, 2025</p>
+                    <a href="#" class="view-document">View Document</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    function openTab(tabName) {
+        // Hide all tab content
+        var tabContents = document.getElementsByClassName("tab-content");
+        for (var i = 0; i < tabContents.length; i++) {
+            tabContents[i].classList.remove("active");
+        }
+        
+        // Remove active class from all tab buttons
+        var tabButtons = document.getElementsByClassName("tab-button");
+        for (var i = 0; i < tabButtons.length; i++) {
+            tabButtons[i].classList.remove("active");
+        }
+        
+        // Show the selected tab content and mark button as active
+        document.getElementById(tabName).classList.add("active");
+        event.currentTarget.classList.add("active");
+    }
+</script>
 
 <!-- Footer Section -->
 <footer class="footer-section">
